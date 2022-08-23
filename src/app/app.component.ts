@@ -14,6 +14,7 @@ export class AppComponent {
   isLinear = true;
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  thirdFormGroup!: FormGroup;
   userFormDetails!: any;
 
   constructor(
@@ -34,11 +35,14 @@ export class AppComponent {
       sub_county: ['', Validators.required],
       constituency: ['', Validators.required]
     });
+    this.thirdFormGroup = this._formBuilder.group({
+      preferences: ['', Validators.required]
+    });
   }
 
   submit(){
-    this.userFormDetails = {...this.firstFormGroup.value, ...this.secondFormGroup.value};
+    this.userFormDetails = {...this.firstFormGroup.value, ...this.secondFormGroup.value, ...this.thirdFormGroup.value};
     this.userService.adduser(this.userFormDetails);
-    console.log(this.userFormDetails);
+    //console.log(this.userFormDetails);
   }
 }

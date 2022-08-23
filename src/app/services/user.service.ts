@@ -29,7 +29,7 @@ export class UserService {
     return this.http.post<any>(api, user, this.httpOptions)
     .subscribe((res: any) => {
       console.log(res);
-      this.router.navigate(['patients']);
+      this.router.navigate(['home']);
     })
   }
 

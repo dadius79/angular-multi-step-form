@@ -94,6 +94,38 @@
                 </div>
               </form>
             </mat-step>
+            <mat-step [stepControl]="thirdFormGroup">
+              <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Preferences</ng-template>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Hobbies</mat-label>
+                      <mat-select formControlName="preferences" multiple>
+                        <mat-option [value]="1">Football</mat-option>
+                        <mat-option [value]="2">Dancing</mat-option>
+                        <mat-option [value]="3">Music</mat-option>
+                        <mat-option [value]="4">Movies</mat-option>
+                        <mat-option [value]="5">Travelling</mat-option>
+                        <mat-option [value]="6">Basketball</mat-option>
+                        <mat-option [value]="7">Motorsport</mat-option>
+                        <mat-option [value]="8">Art</mat-option>
+                        <mat-option [value]="9">Poetry</mat-option>
+                        <mat-option [value]="10">Food</mat-option>
+                        <mat-option [value]="11">History</mat-option>
+                        <mat-option [value]="12">Literature</mat-option>
+                        <mat-option [value]="13">Philosophy</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
             <mat-step>
               <ng-template matStepLabel>Done</ng-template>
               <p>You are now done.</p>
