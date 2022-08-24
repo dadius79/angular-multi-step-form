@@ -13,10 +13,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { TemplateOneComponent } from './template-one/template-one.component';
+import { StepperOneComponent } from './stepper-one/stepper-one.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TemplateOneComponent,
+    StepperOneComponent
   ],
   imports: [
     BrowserModule,
